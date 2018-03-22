@@ -37,7 +37,7 @@ public class MapBuilder {
         InteriorManager.Start();
     }
 
-    public static void drawVillage(int size, int posX, int posY) {
+    private static void drawVillage(int size, int posX, int posY) {
         System.out.println("Village at " + posX + "." + posY);
         for (int i = posX - size; i <= posX + size; i++) {
             for (int j = posY - size; j <= posY + size; j++) {
@@ -60,7 +60,7 @@ public class MapBuilder {
         }
     }
 
-    public static void drawConnectingLine(int startX, int startY, int endX, int endY, int tile) {
+    private static void drawConnectingLine(int startX, int startY, int endX, int endY, int tile) {
         holderX = startX;
         holderY = startY;
         Progression.tiles[holderX][holderY] = tile;
@@ -79,7 +79,7 @@ public class MapBuilder {
         }
     }
 
-    public static void drawLine(int spriteNo) {
+    private static void drawLine(int spriteNo) {
         tileHolder = rand.nextInt(31);
         Progression.tiles[0][tileHolder] = 1;
         for (int x = 1; x < Progression.mapSize; x++) {
@@ -96,7 +96,7 @@ public class MapBuilder {
         }
     }
 
-    public static void drawCluster(int SpriteNo, int Density, int size, int number) {
+    private static void drawCluster(int SpriteNo, int Density, int size, int number) {
         for (int i = 0; i < number; i++) {
             clusterX = rand.nextInt(Progression.mapSize);
             clusterY = rand.nextInt(Progression.mapSize);
@@ -116,7 +116,7 @@ public class MapBuilder {
         }
     }
 
-    public static void fillGaps() {
+    private static void fillGaps() {
         System.out.println("Filling gaps in map...");
         for (int x = 0; x < Progression.mapSize; x++) {
             for (int y = 0; y < Progression.mapSize; y++) {
