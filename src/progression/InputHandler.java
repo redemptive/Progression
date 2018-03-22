@@ -162,25 +162,13 @@ public class InputHandler implements MouseListener, KeyListener {
             MapManager.actionPress(getActionX(), getActionY());
         }
         if (KeyCode == KeyEvent.VK_I) {
-            if (Progression.iPress == true) {
-                Progression.iPress = false;
-            } else {
-                Progression.iPress = true;
-            }
+            Progression.iPress = Progression.iPress != true;
         }
         if (KeyCode == KeyEvent.VK_C) {
-            if (Progression.cPress == true) {
-                Progression.cPress = false;
-            } else {
-                Progression.cPress = true;
-            }
+            Progression.cPress = Progression.cPress != true;
         }
         if (KeyCode == KeyEvent.VK_ESCAPE) {
-            if (Progression.pause == true) {
-                Progression.pause = false;
-            } else {
-                Progression.pause = true;
-            }
+            Progression.pause = Progression.pause != true;
         }
     }
 }

@@ -31,13 +31,6 @@ public class TimeManager {
         } else {
             timeDelay++;
         }
-        if ((gTHours == 0) && (gTMinutes == 0)) {
-            gameplayUpdate();
-        }
-    }
-    
-    public static void gameplayUpdate() {
-        
     }
 
     public static String getTime() {
